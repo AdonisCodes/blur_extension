@@ -6,7 +6,7 @@ chrome://extensions
 ```
 
 2. In the top right, click **Developer mode**
-3. Download this repository
+3. Download this repository by clicking the green code button, and then zip
 4. Unzip the .zip file downloaded
 5. Back in the chrome://extensions tab click load unpacked
 6. Find the folder where the manifest.json is in ( The zip file you extracted will have it inside ). And select that folder
