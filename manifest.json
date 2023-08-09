@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Simple Thumbnanil Blur Extension",
-    "version": "1.0",
+    "version": "1.1",
     "description": "A simple Chrome extension to blur Youtube Thumbnails",
     "permissions": ["activeTab"
 ],
@@ -20,8 +20,16 @@
     },
     "content_scripts": [
       {
+        "matches": ["*://*.youtube.com/results*"],
+        "js": ["remove_short_suggests_search.js"]
+      },
+      {
+        "matches": ["*://*.youtube.com/"],
+        "js": ["remove_short_suggests_main.js"]
+      },
+      {
         "matches": ["*://*.youtube.com/*"],
-        "js": ["content.js"]
+        "js": ["blur_thumbnails.js"]
       }
     ]
   }
