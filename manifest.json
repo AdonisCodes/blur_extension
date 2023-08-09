@@ -20,16 +20,8 @@
     },
     "content_scripts": [
       {
-        "matches": ["*://*.youtube.com/results*"],
-        "js": ["remove_short_suggests_search.js"]
-      },
-      {
-        "matches": ["*://*.youtube.com/"],
-        "js": ["remove_short_suggests_main.js"]
-      },
-      {
         "matches": ["*://*.youtube.com/*"],
-        "js": ["blur_thumbnails.js"]
+        "js": ["blur_thumbnails.js", "remove_short_suggests_search.js", "remove_short_suggests_main.js"]
       }
     ]
   }

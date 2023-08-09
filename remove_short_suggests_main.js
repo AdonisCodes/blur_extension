@@ -20,4 +20,4 @@ function removeShortsMain() {
       }
 }
 
-const removeShortsMainInterval = setInterval(removeShortsMain, 1);
+const removeShortsMainInterval = setInterval(removeShortsMain, 50);

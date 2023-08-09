@@ -5,4 +5,4 @@ const blurInterval = setInterval(() => {
   nodes.forEach((n) => {
     n.style.filter = "blur(20px)";
   });
-}, 1);
+}, 50);
