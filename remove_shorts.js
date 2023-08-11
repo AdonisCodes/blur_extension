@@ -1,7 +1,7 @@
-function removeShortsSearch() {
+function removeShortsVideos() {
     try {
         const shorts = document.evaluate(
-            "//ytd-reel-shelf-renderer",
+            "//ytd-video-renderer[descendant::*[contains(@href, '/shorts')]]",
             document,
             null,
             XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,
@@ -9,7 +9,7 @@ function removeShortsSearch() {
         );
 
         for (let i = 0; i < shorts.snapshotLength; i++) {
-            console.log("deleting shorts renderer", shorts.snapshotItem(i), "in search results");
+            console.log("deleting a short", shorts.snapshotItem(i).nodeName);
             shorts.snapshotItem(i).remove();
         }
     }
@@ -18,4 +18,4 @@ function removeShortsSearch() {
     }
 }
 
-const shortRemovalIntervalSearch = setInterval(removeShortsSearch, 50);
+const shortRemovalInterval = setInterval(removeShortsVideos, 200); 

@@ -21,7 +21,12 @@
     "content_scripts": [
       {
         "matches": ["*://*.youtube.com/*"],
-        "js": ["blur_thumbnails.js", "remove_short_suggests_search.js", "remove_short_suggests_main.js"]
+        "js": [
+          "blur_thumbnails.js", 
+          "remove_shorts.js",
+          "remove_short_suggests_search.js", 
+          "remove_short_suggests_main.js"
+        ]
       }
     ]
   }
